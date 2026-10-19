@@ -3,8 +3,8 @@ requires = ["setuptools >= 61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "morl-d-s"
-description = "MORL/D-S: decomposition-based multi-objective reinforcement learning with symmetry exploitation (code for the MORL/D-S paper)"
+name = "e-morl-d"
+description = "E-MORL/D: decomposition-based multi-objective reinforcement learning with symmetry exploitation (code for the E-MORL/D paper)"
 readme = "README.md"
 requires-python = ">= 3.8, < 3.11"
 version = "1.0.0"

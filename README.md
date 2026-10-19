@@ -1,8 +1,8 @@
-# MORL/D-S: Decomposition-Based Multi-Objective Reinforcement Learning with Symmetry Exploitation
+# E-MORL/D: Decomposition-Based Multi-Objective Reinforcement Learning with Symmetry Exploitation
 
-Official implementation of the **MORL/D-S** algorithm.
+Official implementation of the **E-MORL/D** algorithm.
 
-MORL/D-S extends decomposition-based multi-objective RL (MORL/D) by exploiting
+E-MORL/D extends decomposition-based multi-objective RL (MORL/D) by exploiting
 **MDP symmetries** with *MDP-homomorphic networks* (van der Pol et al., 2020).
 This repository contains **the algorithm code only** (no experiment / plotting scripts).
 
@@ -10,7 +10,7 @@ This repository contains **the algorithm code only** (no experiment / plotting s
 
 | Component | Location |
 |---|---|
-| **MORL/D-S** algorithm (`MORLD_S`) | `morl_baselines/multi_policy/morld/morld_s.py` |
+| **E-MORL/D** algorithm (`MORLD_S`) | `morl_baselines/multi_policy/morld/morld_s.py` |
 | MORL/D (used by the S-MORL/D ablation baseline) | `morl_baselines/multi_policy/morld/morld.py` |
 | Symmetry-aware policies `DQN_S` / `PPO_C` | `morl_baselines/single_policy/ser/mo_dqn_s.py`, `mo_ppo.py` |
 | EUPG policy-gradient policies | `morl_baselines/single_policy/esr/` |
@@ -26,7 +26,7 @@ The code is based on a modified version of [morl-baselines](https://github.com/L
 ```bash
 # 1. environment (Python 3.10)
 conda env create -f environment.yml
-conda activate morl-d-s
+conda activate e-morl-d
 
 # 2. install this package (provides the `morl_baselines` and `symmetrizer` modules)
 pip install -e .
@@ -42,7 +42,7 @@ cp patches/mo_gymnasium/four_room.py        $DST_DIR/four_room/
 
 ## Quick start
 
-Training MORL/D-S on a symmetric Deep Sea Treasure variant (`v0_S`):
+Training E-MORL/D on a symmetric Deep Sea Treasure variant (`v0_S`):
 
 ```python
 import torch
@@ -63,7 +63,7 @@ seed_everything(3047)
 algo = MORLD_S(
     env=env,
     env_name=env_name,
-    alg_name="MORL-D-S",
+    alg_name="E-MORL-D",
     pop_size=10,
     net_arch=[64, 64],
     symmetry=True,
@@ -103,9 +103,9 @@ Notes:
 ## Project structure
 
 ```
-MORL-D-S/
+E-MORL-D/
 ├── morl_baselines/
-│   ├── multi_policy/morld/  # MORLD_S (MORL/D-S) and MORLD (MORL/D)
+│   ├── multi_policy/morld/  # MORLD_S (E-MORL/D) and MORLD (MORL/D)
 │   ├── single_policy/       # DQN_S / PPO_C symmetry-aware policies, EUPG policies
 │   └── common/              # utilities + symmetric DST benchmark maps (env.py)
 ├── symmetrizer/             # MDP-homomorphic networks (top-level package)

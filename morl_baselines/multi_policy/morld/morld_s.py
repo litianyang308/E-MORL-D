@@ -66,7 +66,7 @@ class MORLD_S(MOAgent):
         self,
         env: gym.Env,
         env_name: str = "env_name",
-        alg_name: str = "MORL-DS-1",
+        alg_name: str = "E-MORL-D",
         pop_size: int = 6,
         symmetry: bool = False,
         net_arch: List = [64, 64],
