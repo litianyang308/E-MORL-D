@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# IDEs / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Training outputs (if you run the algorithm from this repository)
+res/
+res_s/
+Loss/
+wandb/

@@ -1,0 +1,29 @@
+# PyTorch with CUDA 11.8 (for CPU-only machines, instead run:
+#   pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.2.1
+
+# --- core ---
+gymnasium==0.29.1
+mo-gymnasium==1.0.1
+numpy==1.26.4
+scipy==1.11.4
+pymoo==0.6.1.1
+pandas==2.2.1
+
+# --- analysis & plotting ---
+matplotlib==3.8.3
+seaborn==0.13.2
+scikit-learn==1.4.1.post1
+paretoset==1.2.3
+openpyxl==3.1.2
+
+# --- environments / logging / misc ---
+pygame==2.5.2
+mujoco==3.1.2
+wandb==0.16.3
+imageio==2.34.0
+moviepy
+cvxpy==1.4.2
+fire==0.5.0
+interval==1.0.0

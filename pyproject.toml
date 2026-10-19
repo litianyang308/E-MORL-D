@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morl-d-s"
+description = "MORL/D-S: decomposition-based multi-objective reinforcement learning with symmetry exploitation (code for the MORL/D-S paper)"
+readme = "README.md"
+requires-python = ">= 3.8, < 3.11"
+version = "1.0.0"
+license = { text = "MIT License" }
+keywords = ["Reinforcement Learning", "Multi-Objective", "MORL", "Symmetry", "Gymnasium"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "mo-gymnasium == 1.0.1",
+    "gymnasium >= 0.28.1, < 0.30",
+    "numpy >= 1.21.0",
+    "torch >= 1.12.0",
+    "pygame >= 2.1.0",
+    "scipy >= 1.7.3",
+    "pymoo >= 0.6.0",
+    "pandas",
+    "scikit-learn",
+    "seaborn",
+    "matplotlib",
+    "paretoset",
+    "wandb >= 0.14.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["morl_baselines*", "symmetrizer*"]
